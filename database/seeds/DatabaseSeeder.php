@@ -1,6 +1,8 @@
 <?php
 
+use App\Post;
 use App\User;
+use App\Topic;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,5 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         factory(User::class, 20)->create();
+
+        Topic::create(['name' => 'Feautured Sites', 'slug' => 'featured']);
+        Topic::create(['name' => 'Useful Links', 'slug' => 'links']);
+        Topic::create(['name' => 'Guides & Tutorials', 'slug' => 'tutorials']);
+
+        factory(Post::class, 20)->create();
     }
 }
