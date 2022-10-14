@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         factory(User::class, 20)->create();
 
-        Topic::create(['name' => 'Feautured Sites', 'slug' => 'featured']);
+        Topic::create(['name' => 'Featured Sites', 'slug' => 'featured']);
         Topic::create(['name' => 'Useful Links', 'slug' => 'links']);
         Topic::create(['name' => 'Guides & Tutorials', 'slug' => 'tutorials']);
 
